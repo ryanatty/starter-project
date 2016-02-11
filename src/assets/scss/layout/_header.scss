@@ -1,0 +1,19 @@
+.site-header {
+  background-color: $black;
+  color: $white;
+  padding: 1em 0;
+
+  &__ask-an-expert {
+    top: 0;
+
+    @include breakpoint(medium) {
+      position: absolute;
+      right: 1rem;
+      top: 0.5rem;
+    }
+
+    @include breakpoint(medium) {
+      top: 1rem;
+    }
+  }
+}

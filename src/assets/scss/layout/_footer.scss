@@ -1,0 +1,58 @@
+.site-footer {
+  background-color: $black;
+  color: $white;
+  padding-top: $global-margin * 2;
+
+  &__lower {
+    border: 1px solid $dark-gray;
+    border-left: 0;
+    border-right: 0;
+    padding: ($global-margin * 2) 0;
+
+    @include breakpoint(large) {
+      margin-top: ($global-margin * 2);
+    }
+
+    .grid__column--6 {
+      @include breakpoint(large) {
+        @include grid-column(6);
+      }
+    }
+  }
+
+  &__associations {
+    margin: 0 auto $global-margin;
+  }
+
+  &__copyright {
+    color: $dark-gray;
+    font-size: 0.8rem;
+    padding: $global-margin 0 ($global-margin * 2);
+    margin: 0;
+  }
+
+  &__copyright-symbol {
+    font-family: sans-serif;
+  }
+}
+
+.op-hours {
+  @include breakpoint(large) {
+    text-align: left;
+  }
+
+  &__title {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  &__locations {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__location {
+    font-size: 0.7rem;
+  }
+}

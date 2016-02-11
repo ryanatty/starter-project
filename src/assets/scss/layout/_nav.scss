@@ -1,0 +1,193 @@
+.nav__dropdown-toggle {
+  @extend .button;
+  @extend .button--small;
+
+  &:active {
+    outline: none;
+  }
+
+  .is-open & {
+    background: $primary-color;
+    color: $white;
+  }
+}
+
+.nav__dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.priority-nav__dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  text-align: right;
+  background-color: $primary-color;
+  z-index: 10;
+
+  .is-empty & {
+    right: -25%;
+    text-align: center;
+  }
+
+  li {
+    display: block;
+    padding: 0.5rem !important;
+    border: 0;
+    margin: 0.25rem 0;
+
+    a {
+      color: $white;
+    }
+  }
+}
+
+.site-nav {
+  &__title {
+    font-family: $header-font-family;
+    text-transform: uppercase;
+  }
+
+  &__nav-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+  }
+
+  &__item {
+    padding: 0 1rem;
+    border-left: 1px solid $light-gray;
+
+    &:first-child {
+      border: 0;
+      padding-left: 0;
+    }
+
+    &:nth-child(2) {
+      border: 0 !important;
+      padding-left: 0;
+    }
+  }
+  
+  &__link {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+
+    @include breakpoint(large) {
+      display: block;
+      padding: 0 1rem;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      line-height: 1rem;
+    }
+
+    &:hover {
+      color: $medium-gray;
+    }
+  }
+}
+
+.site-nav--footer {
+  display: inline-block;
+
+  @include breakpoint(large) {
+    padding-top: 1rem;
+  }
+
+  .site-nav {
+    &__title {
+      padding-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    &__nav-items {
+      margin-bottom: ($global-margin * 2);
+
+      @include breakpoint(large) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__item {
+      border: 0;
+      padding: 0;
+      font-size: 1rem;
+      margin: 0.5rem 0;
+
+      @include breakpoint(large) {
+        padding: 0;
+        margin: 0;
+        float: left;
+        border-left: 1px solid $light-gray;
+      }
+
+      &--title {
+        border: 0;
+
+        @include breakpoint(medium) {
+          padding-top: 0.5rem;
+        }
+      }
+    }
+
+    &__link {
+      color: $white;
+
+      @include breakpoint(large) {
+        font-size: 0.7rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      &:hover {
+        color: $primary-color;
+      }
+
+      &--ask-an-expert {
+        display: none;
+      }
+    }
+  }
+}
+
+.site-nav--header {
+  padding: 1rem 0;
+
+  @include breakpoint(large) {
+    padding: 0;
+  }
+
+  .site-nav {
+    &__title {
+      @include breakpoint(large) {
+       margin-bottom: 0;
+       font-size: 1.4rem;
+       padding-top: 0.3rem;
+      }
+    }
+
+    &__item {
+      @include breakpoint(large) {
+        margin-bottom: 0;
+        padding: 1rem 0;
+      }
+
+      &--title {
+      }
+    }
+
+    &__link {
+    }
+  }
+}
+
+.site-nav--internal {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid $light-gray;
+  width: 100%;
+
+  .site-nav {
+    display: inline-block;
+  }
+}

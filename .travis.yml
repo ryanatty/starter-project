@@ -1,0 +1,35 @@
+language: node_js
+
+node_js:
+  - 0.12
+
+branches:
+  only:
+    - master
+    - live
+
+before_install:
+  - npm install -g gulp
+  - npm install -g bower
+
+install:
+  - bundle install
+  - npm install
+  - bower install
+
+cache: 
+ bundler: true
+ directories:
+  - bower_components
+  - node_modules
+
+before_script:
+# Add host to trusted hosts before
+#  - echo -e "Host stage.server.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+#  - echo -e "Host server.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+
+script:
+  - gulp publish
+
+after_success:
+  - bash deploy.sh

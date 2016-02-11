@@ -1,0 +1,36 @@
+.free-quote {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+
+  &__title {
+    font-family: $header-font-family;
+    font-size: 1.5em;
+  }
+
+  &__link {
+    color: $white;
+
+    &:hover {
+      color: $medium-gray;
+    }
+  }
+
+  &--top {
+    position: absolute;
+    left: 1rem;
+    top: 0;
+
+    @include breakpoint(large) {
+      top: 1.2rem;
+    }
+  }
+
+  &--footer {
+    margin-bottom: $global-margin * 2;
+
+    @include breakpoint(large) {
+      float: right;
+      padding-top: 0.5rem;
+    }
+  }
+}

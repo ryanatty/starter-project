@@ -1,0 +1,89 @@
+.post {
+  &--full {
+  }
+
+  &--summary {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 120% auto;
+    padding-bottom: 4em;
+    margin-bottom: 2em;
+    border: 2px solid $light-gray;
+    padding: 1rem;
+    text-align: center;
+
+    &__title-link {
+      color: $black;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 2em;
+    margin-bottom: 0;
+    margin-bottom: $global-margin / 2;
+  }
+
+  &__by-line {
+    font-size: 0.9em;
+    margin-bottom: $global-margin * 2;
+  }
+
+  &__hero {
+    margin: 0 auto $global-margin * 2;
+  }
+
+  &__summary {
+    text-align: left;
+    margin-bottom: ($global-margin * 2);
+  }
+
+  &__highlights-heading {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin-bottom: ($global-margin * 2);
+    font-family: $body-font-family;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto ($global-margin * 2);
+    width: 90%;
+
+    @include breakpoint(medium) {
+      @include grid-layout(2, 'li');
+      @include clearfix;
+    }
+  }
+
+  &__highlight-item {
+    text-align: left;
+    margin-bottom: $global-margin;
+    line-height: 1.3em;
+    padding-left: 1.5em;
+    background-image: url(/assets/images/checkmark.svg);
+    background-repeat: no-repeat;
+    background-position: 0 top;
+    background-size: 1em;
+    font-size: 0.9em;
+  }
+
+  &__body {
+    margin-bottom: 3rem;
+
+    @include breakpoint(medium) {
+      text-align: left;
+    }
+
+    li {
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

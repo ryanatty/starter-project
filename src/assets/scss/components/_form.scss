@@ -1,0 +1,107 @@
+.form {
+  padding: $global-margin;
+  border: 2px solid $light-gray;
+  margin-bottom: $global-margin;
+
+  &--ask-an-expert {
+    textarea {
+      height: 10rem;
+    }
+
+    @include breakpoint(large) {
+      padding: ($global-margin * 3) 10rem;
+
+      .header-row {
+        @include grid-row();
+      }
+
+      h3 {
+        @include grid-column(3);
+        font-size: 4rem;
+        
+        span {
+          font-size: 1.3rem;
+        }
+      }
+
+      p {
+        @include grid-column(9);
+        text-align: left;
+        font-size: 1rem;
+        line-height: 2rem;
+        text-transform: uppercase;
+      }
+
+      .form-row {
+        @include grid-row();
+      }
+
+      .form-col {
+        @include grid-column(6);
+      }
+
+      .hack--increase-margin {
+        margin-top: 2.4rem;
+      }
+
+      button {
+        margin-top: ($global-margin * 2);
+      }
+    }
+  }
+
+  &__summary {
+    font-size: 0.8rem;
+    line-height: 1.5em;
+    margin-bottom: $global-margin * 2;
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+  }
+
+  &__label-text {
+    display: none;
+  }
+
+  &__field {
+    background-color: $secondary-color;
+    border: 2px solid $secondary-color;
+    border-radius: $input-radius;
+    display: block;
+    width: 100%;
+    line-height: 1rem;
+    padding: 1rem;
+    margin-bottom: $global-margin;
+    font-family: sans-serif;
+    transition: all 0.3s;
+
+    &:focus {
+      border-color: $primary-color;
+      outline: 0;
+    }
+
+    &--select {
+      height: 3.5rem;
+    }
+
+    &--error {
+      border-color: $input-background-invalid !important;
+
+      &:focus {
+        border-color: $input-background-invalid;
+      }
+    }
+  }
+
+  &--alt {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+
+    &__field {
+      background-color: $white;
+      border-color: $white;
+    }
+  }
+}

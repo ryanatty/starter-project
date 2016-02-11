@@ -1,0 +1,31 @@
+@include font-face('Bodoni', '/assets/fonts/bodoni/3011BC_0_0');
+@include font-face('Keep Calm', '/assets/fonts/keep-calm/3011BC_1_0');
+@include font-face('Keep Calm', '/assets/fonts/keep-calm/3011BC_2_0', 'italic');
+
+body {
+  font-family: $body-font-family;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+  font-family: $header-font-family;
+  line-height: 1em;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-transform: none;
+
+  &--category {
+    margin-bottom: 3rem;
+  }
+
+  &__sub-text {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+    font-family: $body-font-family;
+  }
+}

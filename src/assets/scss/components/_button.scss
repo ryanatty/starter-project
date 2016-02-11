@@ -1,0 +1,41 @@
+.button {
+  padding: 1em 1em 0.7em;
+  border: 0;
+  color: $white;
+  background-color: $primary-color;
+  text-transform: uppercase;
+  border: 2px solid $primary-color;
+  display: inline-block;
+  line-height: 1em;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: rgba($white, 0.0);
+    color: $primary-color;
+  }
+
+  &--hollow {
+    color: $primary-color;
+    background-color: rgba($primary-color, 0.0);
+
+    &:hover, &:active, &:focus {
+      background-color: rgba($primary-color, 1);
+      color: $white;
+    }
+  }
+
+  &--light {
+    color: $white;
+    background-color: rgba($white, 0.0);
+    border-color: $white;
+
+    &:hover, &:active, &:focus {
+      background-color: $white;
+      color: $dark-gray;
+    }
+  }
+
+  &--small {
+    font-size: 0.7rem;
+  }
+}

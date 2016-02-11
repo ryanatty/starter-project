@@ -1,0 +1,21 @@
+.logo {
+  display: block;
+  margin: 0 auto;
+
+  &--top {
+    width: 8rem;
+
+    @include breakpoint(large) {
+      width: 15rem;
+    }
+  }
+
+  &--footer {
+    width: 10rem;
+    margin-bottom: ($global-margin * 2);
+
+    @include breakpoint(large) {
+      float: left;
+    }
+  }
+}
