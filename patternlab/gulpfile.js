@@ -70,7 +70,7 @@ gulp.task('cp:js', function(){
 // Images copy
 gulp.task('cp:img', function(){
   return gulp.src(
-    [ '**/*.gif', '**/*.png', '**/*.jpg', '**/*.jpeg'  ],
+    [ '**/*.gif', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.svg'  ],
     {cwd: path.resolve(paths().source.images)} )
     .pipe(gulp.dest(path.resolve(paths().public.images)));
 });
